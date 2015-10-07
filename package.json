@@ -5,6 +5,7 @@
   "main": "lib/start.js",
   "scripts": {
     "test": "node node_modules/lab/bin/lab -a code  -r lcov -o lcov.info -r console -o stdout",
+    "codeclimate": "CODECLIMATE_REPO_TOKEN=29664214b378f1abb540b1fccd1ca4950ad1e526e7417efcb896cfc8b8c643a6 ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./lcov.info",
     "start": "node lib/start.js"
   },
   "repository": {
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "code": "^1.5.0",
+    "codeclimate-test-reporter": "^0.1.1",
     "lab": "^6.1.0"
   }
 }
