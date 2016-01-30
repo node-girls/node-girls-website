@@ -62,8 +62,54 @@ footer.page-footer {
 ***************************/
 svg{
   height:100%;
+  width: 100%;
 }
 
-#logo-container {
-  height: 80%;
+.logo-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/***************************
+  HERO IMAGE
+***************************/
+
+.hero-image{
+  background: url(../images/node-girls-background-image.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  height: 100vh;
+  width: 100%;
+}
+
+/***************************
+  WHY
+***************************/
+
+@media only screen and (min-width: 993px) {
+  .why-container {
+    width: 50%;
+  }
+}
+
+.why-text-container{
+  width:50%;
+  margin: 0 auto;
+}
+
+.why-text-container__divider{
+  width: 50%;
+  margin: 0 auto;  
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #e0e0e0;
+}
+
+.join-button{
+  border: 1.5px solid #4CAF50;
+  color: #212121;
 }
