@@ -55,3 +55,15 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+
+/***************************
+  LOGO
+***************************/
+svg{
+  height:100%;
+}
+
+#logo-container {
+  height: 80%;
+}
