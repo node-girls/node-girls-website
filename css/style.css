@@ -56,17 +56,100 @@ footer.page-footer {
   margin: 0;
 }
 
+/***************************
+  NAV BAR
+***************************/
+
+.nav-list {
+  position: absolute;
+  margin: 0 auto;
+}
+
+.nav-list__list-item {
+  font-size: 150%;
+  padding: 0 26px;
+  color: #616161;
+}
+
+@media only screen and (min-width: 980px) {
+  .nav-list {
+    left: 0;
+  }
+  .nav-list__list-item {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 1070px) {
+  .nav-list__list-item {
+    padding: 0 26px;
+  }
+}
+
+@media only screen and (min-width: 1130px) {
+  .nav-list {
+    left: 2%;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .nav-list {
+    left: 4%;
+  }
+}
+
+@media only screen and (min-width: 1260px) {
+  .nav-list {
+    left: 7%;
+  }
+}
+
+@media only screen and (min-width: 1319px) {
+  .nav-list {
+    left: 9%;
+  }
+}
+
+@media only screen and (min-width: 1360px) {
+  .nav-list {
+    left: 12%;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  .nav-list {
+    left: 14%;
+  }
+}
+
+@media only screen and (min-width: 1540px) {
+  .nav-list {
+    left: 16%;
+  }
+}
+
+@media only screen and (min-width: 1630px) {
+  .nav-list {
+    left: 18%;
+  }
+}
+
+@media only screen and (min-width: 1680px) {
+  .nav-list {
+    left: 19%;
+  }
+}
 
 /***************************
   LOGO
 ***************************/
-svg{
+svg {
   height:100%;
   width: 100%;
 }
 
 .logo-container {
-  width: 60%;
+  width: 77%;
   margin: 0 auto;
 }
 
@@ -75,7 +158,7 @@ svg{
 ***************************/
 
 .hero-image{
-  background: url(../images/node-girls-background-image.jpg) no-repeat center center; 
+  background: url(../images/node-girls-background-image.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -102,7 +185,7 @@ svg{
 
 .why-text-container__divider{
   width: 50%;
-  margin: 0 auto;  
+  margin: 0 auto;
   display: block;
   height: 1px;
   border: 0;
