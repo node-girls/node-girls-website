@@ -198,6 +198,34 @@ svg {
 }
 
 /***************************
+  FOOTER
+***************************/
+.row .footer__contact{
+  padding: 0 1em;
+}
+
+.footer__mailto{
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.social-icons{
+  text-align: center;
+}
+
+@media only screen and (min-width: 993px) {
+  .social-icons{
+    padding: 4em 0 0 0;
+    float: right;
+  }
+}
+
+.social-icons__icon{
+  display: inline-block;
+  padding: 0 0.7em;
+}
+
+/***************************
   TEAM
 ***************************/
 
