@@ -196,3 +196,60 @@ svg {
   border: 1.5px solid #4CAF50;
   color: #212121;
 }
+
+/***************************
+  TEAM
+***************************/
+
+.team-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.team-images-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.team-image {
+  width: 200px;
+  height: 200px;
+  display: block;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 1em auto;
+}
+
+.person {
+  background-image: url("http://placehold.it/300x300");
+}
+
+.michelle {
+  background-image: url("http://placehold.it/300x300");
+}
+
+.claire {
+  background-image: url("http://placehold.it/300x300");
+}
+
+.nikki {
+  background-image: url("../images/team/nikki.jpg");
+}
+
+.ines {
+  background-image: url("http://placehold.it/300x300");
+}
+
+.natalia {
+  background-image: url("http://placehold.it/300x300");
+}
+
+.anita {
+  background-image: url("http://placehold.it/300x300");
+}
+
+.mina {
+  background-image: url("http://placehold.it/300x300");
+}
