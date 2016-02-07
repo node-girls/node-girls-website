@@ -281,3 +281,57 @@ svg {
 .mina {
   background-image: url("http://placehold.it/300x300");
 }
+
+/***************************
+  EVENTS LIST
+***************************/
+
+.event-container {
+  border-bottom: 1px dotted #596677;
+  margin: 30px 0 60px;
+}
+
+.sponsor {
+  margin-top: 15px;
+  max-width: 120px;
+  max-height: 120px;
+  float: right;
+}
+
+.team-image__small {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+.time {
+  font-weight: 400;
+  display: inline-block;
+  font-size: 1.3rem;
+  float: right;
+}
+
+.event-container__header {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 993px) {
+  .flow-text {
+    font-size: 1.3rem;
+  }
+}
+
+a.green-text, a.grey-text {
+    border-bottom: 1px dashed #66bb6a;
+}
+
+.inline-clock-icon {
+  fill: #9e9e9e;
+  top: 2px;
+  position: relative;
+}
+
+.inline-clock-icon svg {
+  height: 16px;
+  width: 16px;
+}
