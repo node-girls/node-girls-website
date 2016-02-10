@@ -64,82 +64,116 @@ footer.page-footer {
   NAV BAR
 ***************************/
 
-.nav-list {
+.nav-list--home {
   position: absolute;
   margin: 0 auto;
 }
 
 .nav-list__list-item {
+  text-align: center;
+  min-width: 199px;
+}
+
+.nav-list__list-item a {
   font-size: 150%;
-  padding: 0 26px;
   color: #616161;
 }
 
+.nav-list__list-item--home {
+  padding: 0 26px;
+}
+
+.nav-list__logo {
+  width: 248px;
+  line-height: normal;
+}
+
 @media only screen and (min-width: 980px) {
-  .nav-list {
+  .nav-list--home {
     left: 0;
   }
-  .nav-list__list-item {
+  .nav-list__list-item--home {
     padding: 0 20px;
+  }
+  .nav-wrapper {
+    width: 100%;
   }
 }
 
 @media only screen and (min-width: 1070px) {
-  .nav-list__list-item {
+  .nav-list__list-item--home {
     padding: 0 26px;
   }
 }
 
 @media only screen and (min-width: 1130px) {
-  .nav-list {
+  .nav-list--home {
     left: 2%;
+  }
+  .nav-wrapper {
+    width: 93%;
   }
 }
 
 @media only screen and (min-width: 1170px) {
-  .nav-list {
+  .nav-list--home {
     left: 4%;
+  }
+  .nav-wrapper {
+     width: 90%;
   }
 }
 
 @media only screen and (min-width: 1260px) {
-  .nav-list {
+  .nav-list--home {
     left: 7%;
+  }
+  .nav-wrapper {
+    width: 84%;
   }
 }
 
 @media only screen and (min-width: 1319px) {
-  .nav-list {
+  .nav-list--home {
     left: 9%;
+  }
+  .nav-wrapper {
+    width: 80%;
   }
 }
 
 @media only screen and (min-width: 1360px) {
-  .nav-list {
+  .nav-list--home {
     left: 12%;
+  }
+  .nav-wrapper {
+    width: 75%;
   }
 }
 
 @media only screen and (min-width: 1450px) {
-  .nav-list {
+  .nav-list--home {
     left: 14%;
+  }
+  .nav-wrapper {
+    width: 70%;
   }
 }
 
 @media only screen and (min-width: 1540px) {
-  .nav-list {
+  .nav-list--home {
     left: 16%;
   }
 }
 
 @media only screen and (min-width: 1630px) {
-  .nav-list {
+  .nav-list--home {
     left: 18%;
   }
 }
 
 @media only screen and (min-width: 1680px) {
-  .nav-list {
+  .nav-list--home {
     left: 19%;
   }
 }
