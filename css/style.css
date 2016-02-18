@@ -293,7 +293,7 @@ svg {
 }
 
 .michelle {
-  background-image: url("http://placehold.it/300x300");
+  background-image: url("../images/team/michelle.png");
 }
 
 .claire {
@@ -318,6 +318,14 @@ svg {
 
 .mina {
   background-image: url("../images/team/mina.png");
+}
+
+.anni {
+  background-image: url("../images/team/anni.jpeg");
+}
+
+.rachel {
+  background-image: url("../images/team/rachel.jpeg");
 }
 
 /***************************
