@@ -23,18 +23,19 @@ p {
   color: #26a69a;
 }
 
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
+.icon-block {
+  padding: 0 15px;
 }
-  .parallax-container .section {
-    width: 100%;
-  }
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+.section {
+  width: 100%;
+}
 
 @media only screen and (max-width : 992px) {
-  .parallax-container .section {
+  .section {
     position: absolute;
     top: 40%;
   }
@@ -44,20 +45,35 @@ p {
 }
 
 @media only screen and (max-width : 600px) {
-  #index-banner .section {
+  .section {
     top: 0;
   }
 }
 
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
+/***************************
+  PARALLAX
+***************************/
+
+.parallax-background {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
 }
 
-footer.page-footer {
-  margin: 0;
+.parallax-background--first-img {
+  background-image: url(../images/first-node-girls-workshop.jpg);
+}
+
+.parallax-background--second-image {
+  background-image: url(../images/background-workshop-3.jpg);
 }
 
 /***************************
@@ -238,6 +254,11 @@ svg {
 /***************************
   FOOTER
 ***************************/
+
+footer.page-footer {
+  margin: 0;
+}
+
 .row .footer__contact{
   padding: 0 1em;
 }
