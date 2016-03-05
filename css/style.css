@@ -35,10 +35,6 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
-  .section {
-    position: absolute;
-    top: 40%;
-  }
   #index-banner .section {
     top: 10%;
   }
@@ -79,6 +75,11 @@ p {
 /***************************
   NAV BAR
 ***************************/
+
+.nav--home {
+  position: absolute;
+  box-shadow: none;
+}
 
 .nav-list--home {
   position: absolute;
@@ -211,7 +212,7 @@ svg {
   HERO IMAGE
 ***************************/
 
-.hero-image{
+.hero-image {
   background: url(../images/node-girls-background-image.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -222,18 +223,22 @@ svg {
   width: 100%;
 }
 
+.hero-image .section {
+  padding-top: 64px;
+}
+
 /***************************
   WHY
 ***************************/
 
 @media only screen and (min-width: 993px) {
   .why-container {
-    width: 50%;
+    width: 70%;
   }
 }
 
-.why-text-container{
-  width:50%;
+.why-text-container {
+  width: 75%;
   margin: 0 auto;
 }
 
