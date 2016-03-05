@@ -69,7 +69,7 @@ p {
 }
 
 .parallax-background--second-image {
-  background-image: url(../images/background-workshop-3.jpg);
+  background-image: url(../images/workshop-feb.jpg);
 }
 
 /***************************
@@ -218,10 +218,6 @@ footer.page-footer {
   background-position: center center;
   background-repeat: no-repeat;
   margin: 1em auto;
-}
-
-.person {
-  background-image: url("http://placehold.it/300x300");
 }
 
 .michelle {
