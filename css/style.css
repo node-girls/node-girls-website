@@ -19,36 +19,6 @@ p {
   line-height: 2rem;
 }
 
-.button-collapse {
-  color: #26a69a;
-}
-
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-
 .icon-block {
   padding: 0 15px;
 }
@@ -56,17 +26,70 @@ p {
   font-size: inherit;
 }
 
-footer.page-footer {
-  margin: 0;
+.section {
+  width: 100%;
+}
+
+/*materialise override*/
+.waves-effect {
+  z-index: 0;
+}
+
+@media only screen and (max-width : 992px) {
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  .section {
+    top: 0;
+  }
+}
+
+/***************************
+  PARALLAX
+***************************/
+
+.parallax-background {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+
+.parallax-background--first-img {
+  background-image: url(../images/first-node-girls-workshop.jpg);
+}
+
+.parallax-background--second-image {
+  background-image: url(../images/workshop-feb.jpg);
 }
 
 /***************************
   NAV BAR
 ***************************/
 
-.nav-list--home {
+.nav-wrapper {
+  width: 100%;
+}
+
+.nav-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav--home {
   position: absolute;
-  margin: 0 auto;
+  box-shadow: none;
 }
 
 .nav-list__list-item {
@@ -79,102 +102,124 @@ footer.page-footer {
   color: #616161;
 }
 
-.nav-list__list-item--home {
-  padding: 0 26px;
-}
-
 .nav-list__logo {
   width: 248px;
   line-height: normal;
 }
 
-@media only screen and (min-width: 980px) {
-  .nav-list--home {
+/***************************
+  HAMBURGER MENU
+***************************/
+
+.nav-frame, .nav-overflow, .nav-button, .nav-close {
+  display: none;
+}
+
+@media only screen and (max-width: 992px) {
+  /* Overwritting some materialise*/
+  nav ul li {
+    transition: none;
+    float: none;
+    padding: 0;
+  }
+
+  .nav-button, .nav-close {
+    position: absolute;
+    top: 0;
     left: 0;
+    z-index: 3;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #4CAF50;
+    text-align: left;
+    display: block;
+    padding: 5px 0 0 10px;
+    cursor: pointer;
+    font-size: 2.7rem;
+    height: 56px;
+    line-height: 56px;
   }
-  .nav-list__list-item--home {
-    padding: 0 20px;
-  }
-  .nav-wrapper {
-    width: 100%;
-  }
-}
 
-@media only screen and (min-width: 1070px) {
-  .nav-list__list-item--home {
-    padding: 0 26px;
+  .nav-close {
+    z-index: -1;
+    visibility: hidden;
   }
-}
 
-@media only screen and (min-width: 1130px) {
-  .nav-list--home {
-    left: 2%;
+  .nav-button:focus {
+    opacity: 0;
   }
-  .nav-wrapper {
-    width: 93%;
-  }
-}
 
-@media only screen and (min-width: 1170px) {
-  .nav-list--home {
-    left: 4%;
+  .nav-button:focus ~ .nav-frame {
+    transform: translateX(-24px);
+    -webkit-transform: translateX(-24px);
   }
-  .nav-wrapper {
-     width: 90%;
-  }
-}
 
-@media only screen and (min-width: 1260px) {
-  .nav-list--home {
-    left: 7%;
+  .nav-button:focus ~ .nav-frame .side-nav {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
   }
-  .nav-wrapper {
-    width: 84%;
-  }
-}
 
-@media only screen and (min-width: 1319px) {
-  .nav-list--home {
-    left: 9%;
+  .nav-frame:active, .nav-button:focus ~ .nav-close {
+    z-index: 3;
+    visibility: visible;
   }
-  .nav-wrapper {
-    width: 80%;
-  }
-}
 
-@media only screen and (min-width: 1360px) {
-  .nav-list--home {
-    left: 12%;
+  .nav-frame {
+    background-color: #fff;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 385px;
+    min-height: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+    text-align: left;
+    display: block;
+    transform: translateX(-390px);
+    -webkit-transform: translateX(-390px);
+    transition: transform 500ms cubic-bezier(0, 1,0,1);
   }
-  .nav-wrapper {
-    width: 75%;
-  }
-}
 
-@media only screen and (min-width: 1450px) {
-  .nav-list--home {
-    left: 14%;
+  .mobile-nav {
+    background-color: #fff;
+    width: 280px;
+    height: 100vh;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    transform: translateX(-150px);
+    -webkit-transform: translateX(-150px);
+    transition: transform 500ms cubic-bezier(0, 1,0,1);
+    padding-left: 70px;
   }
-  .nav-wrapper {
-    width: 70%;
-  }
-}
 
-@media only screen and (min-width: 1540px) {
-  .nav-list--home {
-    left: 16%;
+  .mobile-nav li {
+    line-height: 1.1em;
+    font-size: 14px;
+    padding: 0 15px;
+    line-height: 64px;
   }
-}
 
-@media only screen and (min-width: 1630px) {
-  .nav-list--home {
-    left: 18%;
+  .nav-frame:active ~ .nav-overflow, .nav-button:focus ~ .nav-overflow, .nav-frame:active ~ .nav-overflow, .nav-button:focus ~ .nav-overflow {
+    opacity: 0.75;
+    pointer-events: auto;
   }
-}
-
-@media only screen and (min-width: 1680px) {
-  .nav-list--home {
-    left: 19%;
+  .nav-overflow {
+    display: block;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: #434343;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0, .67,0,.67);
+    pointer-events: none;
   }
 }
 
@@ -186,38 +231,61 @@ svg {
   width: 100%;
 }
 
-.logo-container {
-  width: 77%;
-  margin: 0 auto;
-}
-
 /***************************
   HERO IMAGE
 ***************************/
 
-.hero-image{
-  background: url(../images/node-girls-background-image.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+@media only screen and (min-width: 815px) {
+  .hero-image {
+    background: url(../images/node-girls-background-image.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
+    height: 100vh;
+    width: 100%;
+  }
+}
+.hero-image {
   height: 100vh;
   width: 100%;
+  /* Trick to stop page jump from this issue: http://stackoverflow.com/questions/24944925/background-image-jumps-when-address-bar-hides-ios-android-mobile-chrome*/
+  transition: height 999999s
+}
+
+.hero-image .section {
+  padding-top: 64px;
 }
 
 /***************************
   WHY
 ***************************/
 
-@media only screen and (min-width: 993px) {
-  .why-container {
-    width: 50%;
+@media only screen and (min-width: 500px) {
+  .why-container, .team-container {
+    width: 75%;
   }
 }
 
-.why-text-container{
-  width:50%;
+@media only screen and (min-width: 993px) {
+  .why-container, .team-container {
+    width: 42%;
+  }
+}
+
+@media only screen and (max-width: 565px) {
+  .why-container h3 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .why-container h5 {
+    font-size: 1.4rem;
+  }
+}
+
+.why-text-container, .team-container {
   margin: 0 auto;
 }
 
@@ -238,6 +306,11 @@ svg {
 /***************************
   FOOTER
 ***************************/
+
+footer.page-footer {
+  margin: 0;
+}
+
 .row .footer__contact{
   padding: 0 1em;
 }
@@ -267,11 +340,6 @@ svg {
   TEAM
 ***************************/
 
-.team-container {
-  width: 50%;
-  margin: 0 auto;
-}
-
 .team-images-container {
   width: 80%;
   margin: 0 auto;
@@ -286,10 +354,6 @@ svg {
   background-position: center center;
   background-repeat: no-repeat;
   margin: 1em auto;
-}
-
-.person {
-  background-image: url("http://placehold.it/300x300");
 }
 
 .michelle {
