@@ -122,18 +122,13 @@ nav ul li {
   border: none;
   outline: none;
   color: #4CAF50;
-  font-size: 20px;
-  line-height: 1.5em;
   text-align: left;
   display: block;
   padding: 5px 0 0 10px;
   cursor: pointer;
-}
-
-.nav-wrapper .nav-button__icon {
-    font-size: 2.7rem;
-    height: 56px;
-    line-height: 56px;
+  font-size: 2.7rem;
+  height: 56px;
+  line-height: 56px;
 }
 
 .nav-close {
@@ -199,11 +194,11 @@ nav ul li {
   line-height: 64px;
 }
 
-.nav-frame:active ~ #navscrim, .nav-button:focus ~ #navscrim, .nav-frame:active ~ #navscrim, .nav-button:focus ~ #navscrim {
+.nav-frame:active ~ .nav-overflow, .nav-button:focus ~ .nav-overflow, .nav-frame:active ~ .nav-overflow, .nav-button:focus ~ .nav-overflow {
     opacity: 0.75;
     pointer-events: auto;
 }
-#navscrim {
+.nav-overflow {
     position: fixed;
     top: 56px;
     left: 0;
@@ -228,15 +223,23 @@ svg {
   HERO IMAGE
 ***************************/
 
-.hero-image {
-  background: url(../images/node-girls-background-image.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+@media only screen and (min-width: 815px) {
+  .hero-image {
+    background: url(../images/node-girls-background-image.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
+    height: 100vh;
+    width: 100%;
+  }
+}
+.hero-image {
   height: 100vh;
   width: 100%;
+  /* Trick to stop page jump from this issue: http://stackoverflow.com/questions/24944925/background-image-jumps-when-address-bar-hides-ios-android-mobile-chrome*/
+  transition: height 999999s
 }
 
 .hero-image .section {
