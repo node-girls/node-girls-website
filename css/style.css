@@ -30,6 +30,11 @@ p {
   width: 100%;
 }
 
+/*materialise override*/
+.waves-effect {
+  z-index: 0;
+}
+
 @media only screen and (max-width : 992px) {
   #index-banner .section {
     top: 10%;
@@ -251,13 +256,13 @@ svg {
 ***************************/
 
 @media only screen and (min-width: 500px) {
-  .why-container {
+  .why-container, .team-container {
     width: 75%;
   }
 }
 
 @media only screen and (min-width: 993px) {
-  .why-container {
+  .why-container, .team-container {
     width: 42%;
   }
 }
@@ -273,7 +278,7 @@ svg {
   }
 }
 
-.why-text-container {
+.why-text-container, .team-container {
   margin: 0 auto;
 }
 
@@ -327,11 +332,6 @@ footer.page-footer {
 /***************************
   TEAM
 ***************************/
-
-.team-container {
-  width: 50%;
-  margin: 0 auto;
-}
 
 .team-images-container {
   width: 80%;
