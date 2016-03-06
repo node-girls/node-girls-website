@@ -111,56 +111,61 @@ p {
   HAMBURGER MENU
 ***************************/
 
-/* Overwritting some materialise*/
-nav ul li {
+.nav-frame, .nav-overflow, .nav-button, .nav-close {
+  display: none;
+}
+
+@media only screen and (max-width: 992px) {
+  /* Overwritting some materialise*/
+  nav ul li {
     transition: none;
     float: none;
     padding: 0;
-}
+  }
 
-.nav-button, .nav-close {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: #4CAF50;
-  text-align: left;
-  display: block;
-  padding: 5px 0 0 10px;
-  cursor: pointer;
-  font-size: 2.7rem;
-  height: 56px;
-  line-height: 56px;
-}
+  .nav-button, .nav-close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #4CAF50;
+    text-align: left;
+    display: block;
+    padding: 5px 0 0 10px;
+    cursor: pointer;
+    font-size: 2.7rem;
+    height: 56px;
+    line-height: 56px;
+  }
 
-.nav-close {
-  z-index: -1;
-  visibility: hidden;
-}
+  .nav-close {
+    z-index: -1;
+    visibility: hidden;
+  }
 
-.nav-button:focus {
+  .nav-button:focus {
     opacity: 0;
-}
+  }
 
-.nav-button:focus ~ .nav-frame {
+  .nav-button:focus ~ .nav-frame {
     transform: translateX(-24px);
     -webkit-transform: translateX(-24px);
-}
+  }
 
-.nav-button:focus ~ .nav-frame .side-nav {
-  transform: translateX(0);
+  .nav-button:focus ~ .nav-frame .side-nav {
+    transform: translateX(0);
     -webkit-transform: translateX(0);
-}
+  }
 
-.nav-frame:active, .nav-button:focus ~ .nav-close {
+  .nav-frame:active, .nav-button:focus ~ .nav-close {
     z-index: 3;
     visibility: visible;
-}
+  }
 
-.nav-frame {
+  .nav-frame {
     background-color: #fff;
     border: 0;
     padding: 0;
@@ -177,33 +182,34 @@ nav ul li {
     transform: translateX(-390px);
     -webkit-transform: translateX(-390px);
     transition: transform 500ms cubic-bezier(0, 1,0,1);
-}
+  }
 
-.mobile-nav {
-  background-color: #fff;
-  width: 280px;
-  height: 100vh;
-  position: absolute;
-  top: 45px;
-  right: 0;
-  transform: translateX(-150px);
-  -webkit-transform: translateX(-150px);
-  transition: transform 500ms cubic-bezier(0, 1,0,1);
-  padding-left: 70px;
-}
+  .mobile-nav {
+    background-color: #fff;
+    width: 280px;
+    height: 100vh;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    transform: translateX(-150px);
+    -webkit-transform: translateX(-150px);
+    transition: transform 500ms cubic-bezier(0, 1,0,1);
+    padding-left: 70px;
+  }
 
-.mobile-nav li {
-  line-height: 1.1em;
-  font-size: 14px;
-  padding: 0 15px;
-  line-height: 64px;
-}
+  .mobile-nav li {
+    line-height: 1.1em;
+    font-size: 14px;
+    padding: 0 15px;
+    line-height: 64px;
+  }
 
-.nav-frame:active ~ .nav-overflow, .nav-button:focus ~ .nav-overflow, .nav-frame:active ~ .nav-overflow, .nav-button:focus ~ .nav-overflow {
+  .nav-frame:active ~ .nav-overflow, .nav-button:focus ~ .nav-overflow, .nav-frame:active ~ .nav-overflow, .nav-button:focus ~ .nav-overflow {
     opacity: 0.75;
     pointer-events: auto;
-}
-.nav-overflow {
+  }
+  .nav-overflow {
+    display: block;
     position: fixed;
     top: 56px;
     left: 0;
@@ -214,6 +220,7 @@ nav ul li {
     opacity: 0;
     transition: opacity 250ms cubic-bezier(0, .67,0,.67);
     pointer-events: none;
+  }
 }
 
 /***************************
