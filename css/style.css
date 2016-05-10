@@ -392,6 +392,10 @@ footer.page-footer {
   background-image: url("../images/team/rachel.jpeg");
 }
 
+.kata {
+  background-image: url("../images/team/kata.jpg");
+}
+
 /***************************
   EVENTS LIST
 ***************************/
