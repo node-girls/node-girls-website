@@ -15,6 +15,10 @@ nav .brand-logo {
   color: #444;
 }
 
+main {
+  min-height: 60vh;
+}
+
 p {
   line-height: 2rem;
 }
@@ -285,7 +289,7 @@ svg {
   }
 }
 
-.why-text-container, .team-container {
+.why-container, .team-container {
   margin: 0 auto;
 }
 
@@ -301,6 +305,20 @@ svg {
 .join-button{
   border: 1.5px solid #4CAF50;
   color: #212121;
+}
+
+.why-container .social-icons {
+  margin: -20px 0 20px 0;
+  text-align: center;
+}
+
+.why-container .social-icons__icon{
+  display: inline-block;
+  padding: 0 0.3em;
+}
+
+.why-image {
+  max-width: 100%;
 }
 
 /***************************
@@ -320,25 +338,61 @@ footer.page-footer {
   text-decoration: underline;
 }
 
-.social-icons{
+footer .social-icons{
   text-align: center;
 }
 
 @media only screen and (min-width: 993px) {
-  .social-icons{
+  footer .social-icons{
     padding: 4em 0 0 0;
     float: right;
   }
 }
 
-.social-icons__icon{
+footer .social-icons__icon{
   display: inline-block;
   padding: 0 0.7em;
 }
 
 /***************************
+  CHAPTERS
+***************************/
+
+.chapter-images-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.chapter-image {
+  width: 250px;
+  height: 250px;
+  display: block;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 1em auto;
+}
+
+.london {
+  background-image: url("../images/chapters/london.jpg");
+}
+
+.sydney {
+  background-image: url("../images/chapters/sydney.jpg");
+}
+
+/***************************
   TEAM
 ***************************/
+
+.profile-images-container p {
+  line-height: 1.5;
+}
+
+.profile-container {
+  min-height: 250px;
+}
 
 .team-images-container {
   width: 80%;
@@ -354,6 +408,13 @@ footer.page-footer {
   background-position: center center;
   background-repeat: no-repeat;
   margin: 1em auto;
+}
+
+@media (max-width: 550px) {
+  .team-image {
+    width: 125px;
+    height: 125px;
+  }
 }
 
 .michelle {
@@ -394,6 +455,10 @@ footer.page-footer {
 
 .kata {
   background-image: url("../images/team/kata.jpg");
+}
+
+.tanya {
+  background-image: url("../images/team/tanya.jpeg");
 }
 
 /***************************
