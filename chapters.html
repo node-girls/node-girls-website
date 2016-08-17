@@ -22,12 +22,12 @@
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-
-      <ul class="hide-on-med-and-down nav-list nav-list--home">
-        <li class="nav-list__list-item nav-list__list-item--home" ><a href="./chapters.html">Chapters</a></li>
-        <li class="nav-list__list-item nav-list__list-item--home" ><a href="./events.html">Events</a></li>
-        <li class="nav-list__list-item nav-list__list-item--home"><a href="./resources.html">Resources</a></li>
-        <li class="nav-list__list-item nav-list__list-item--home" ><a href="#footer">Contact Us</a></li>
+      <ul class="hide-on-med-and-down nav-list nav-list--with-image">
+        <li class="nav-list__list-item"><a href="./chapters.html">Chapters</a></li>
+        <li class="nav-list__list-item"><a href="./events.html">Events</a></li>
+        <li class="nav-list__logo"><a href="./"><img alt="Node Girls Logo" src="./images/ng-logo.svg"></a></li>
+        <li class="nav-list__list-item"><a href="./resources.html">Resources</a></li>
+        <li class="nav-list__list-item"><a href="#footer">Contact Us</a></li>
       </ul>
 
       <!--hamburger menu-->
@@ -51,13 +51,42 @@
 
   <main>
 
-    <div class="container">
-      <h3 class="header center green-text">Resources</h3>
-
-      <p class="flow-text">All of our resources are currently on <a href="https://github.com/node-girls">Github</a>.</p>
-
-      <p class="flow-text">For some helpful links, we recommend taking a look at our <a href="https://github.com/node-girls/cheatsheets">cheatsheets</a>.</p>
-
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="team-container">
+          <h3 class="header center green-text">CHAPTERS</h3>
+          <hr class="why-text-container__divider"/>
+          <div class="row center">
+            <h5 class="header col s12 light">
+              There are currently Node Girls chapters running around the world.
+            </h5>
+            <h5 class="header col s12 light">
+              If you don't see your city, start your own!
+            </h5>
+          </div>
+        </div>
+        <div class="chapter-images-container">
+          <div class="row center">
+            <h5 class="header col s12 green-text">
+              Cities
+            </h5>
+          </div>
+          <div class="row center">
+           <div class="col s12 m6 l4 row center">
+             <a href="london.html">
+              <div class="chapter-image london"></div>
+             </a>
+             <h5>London</h5>
+           </div>
+           <div class="col s12 m6 l5 row center">
+             <a href="sydney.html">
+              <div class="chapter-image sydney"></div>
+             </a>
+             <h5>Sydney</h5>
+           </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </main>
@@ -85,7 +114,6 @@
       </div>
     </div>
   </footer>
-
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
