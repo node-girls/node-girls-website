@@ -1,0 +1,38 @@
+{
+  "name": "node-girls-website",
+  "version": "1.0.0",
+  "description": "Node Girls runs free bootcamps in Node.js for women, inspired by Rails Girls and Django Girls!",
+  "main": "lib/start.js",
+  "scripts": {
+    "test": "node node_modules/lab/bin/lab -a code  -r lcov -o lcov.info -r console -o stdout",
+    "start": "node lib/start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-girls/node-girls-website.git"
+  },
+  "keywords": [
+    "nodejs",
+    "women",
+    "free",
+    "bootcamp"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/node-girls/node-girls-website/issues"
+  },
+  "homepage": "https://github.com/node-girls/node-girls-website#readme",
+  "dependencies": {
+    "env2": "^2.0.2",
+    "handlebars": "^4.0.3",
+    "hapi": "^10.2.0",
+    "hoek": "^2.16.3",
+    "inert": "^3.0.2",
+    "vision": "^3.0.0"
+  },
+  "devDependencies": {
+    "code": "^1.5.0",
+    "lab": "^6.1.0"
+  }
+}
