@@ -457,6 +457,10 @@ footer .social-icons__icon{
   background-image: url("../images/team/kata.jpg");
 }
 
+/***************************
+  SYDNEY TEAM
+***************************/
+
 .tanya {
   background-image: url("../images/team/tanya.jpeg");
 }
@@ -471,6 +475,22 @@ footer .social-icons__icon{
 
 .isabel {
   background-image: url("../images/team/isabel.jpg");
+}
+
+.annabel {
+  background-image: url("../images/team/annabel.jpg");
+}
+
+.tina {
+  background-image: url("../images/team/tina.jpg");
+}
+
+.mutya {
+  background-image: url("../images/team/mutya.jpg");
+}
+
+.everlyn {
+  background-image: url("../images/team/everlyn.jpg");
 }
 
 /***************************
