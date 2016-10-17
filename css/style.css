@@ -359,7 +359,7 @@ footer .social-icons__icon{
 ***************************/
 
 .chapter-images-container {
-  width: 80%;
+  min-height: 250px;
   margin: 0 auto;
 }
 
@@ -380,6 +380,10 @@ footer .social-icons__icon{
 
 .sydney {
   background-image: url("../images/chapters/sydney.jpg");
+}
+
+.melbourne {
+  background-image: url("../images/chapters/melbourne.jpg");
 }
 
 /***************************
@@ -491,6 +495,18 @@ footer .social-icons__icon{
 
 .everlyn {
   background-image: url("../images/team/everlyn.jpg");
+}
+
+.daniel {
+  background-image: url("../images/team/daniel.jpg");
+}
+
+.bron {
+  background-image: url("../images/team/bron.jpg");
+}
+
+.isabell-kiral-korneck {
+  background-image: url("../images/team/isabell-kiral-korneck.jpg");
 }
 
 /***************************
