@@ -1,27 +1,26 @@
-# Welcome to the node-girls-website 
+# Welcome to the node-girls-website
 
-[![Build Status](https://travis-ci.org/node-girls/node-girls-website.svg)](https://travis-ci.org/node-girls/node-girls-website)
-[![Dependency Status](https://david-dm.org/node-girls/node-girls-website.svg)](https://david-dm.org/node-girls/node-girls-website)
-[![devDependency Status](https://david-dm.org/node-girls/node-girls-website/dev-status.svg)](https://david-dm.org/node-girls/node-girls-website#info=devDependencies)
-[![Code Climate](https://codeclimate.com/github/node-girls/node-girls-website/badges/gpa.svg)](https://codeclimate.com/github/node-girls/node-girls-website)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/node-girls/node-girls-website/issues)
 
-## What is Node Girls?
+## What is this?
 
-Node Girls runs free bootcamps in Node.js for women, inspired by [Rails Girls](http://railsgirls.com/) and [Django Girls](https://djangogirls.org/). Right now we're just in London, but we hope to spread the Node love around the globe very soon.
+Node Girls runs free JavaScript and Node.js workshops for women, non-binary and trans folk around the world. This is our official website where we are happy to list any Node Girls events happening around the world.
 
-## Why?
+## How to run this project?
 
-Read more [here](https://github.com/node-girls/start-here/blob/master/README.md)
+For local access, clone the repo from [here](https://github.com/node-girls/node-girls-website).
 
-## How to run node-girls-website?
+Our page is running on [gh-pages](https://pages.github.com/). To see your changes locally, open the page you are editing in a browser.
 
-For local access, please star the repo and then clone it from [here](https://github.com/node-girls/node-girls-website).
+## How to contribute?
 
-Our page is running on [gh-pages](https://pages.github.com/), to see your changes locally, open the page you are editing in a browser. 
+This project is basic frontend HTML and CSS, built using the Materialize CSS library and deployed via [GitHub Pages](https://pages.github.com/).
 
-Note: (currently the site is under construction)
+Some quick tips:
+* To add a chapter, you will need to add a `<city>.html` file to the root directory
+* To add an event, add it to Current Events in the `<city>.html`, `index.html`, and `events.html` files (bonus points if you remember to move it to Past Events once the event ends)
+* To add mentors, add their photo to the `images` directory, set the background image as a class in the CSS file, and add them to the relevant `<city>.html` file
 
-## Wireframes
+Please feel free to make pull requests and add your own chapter of Node Girls. More detailed instructions of how to contribute to this repository are coming. And hopefully, the website will be improved upon sometime soon.
 
-(Under construction)
+In the meantime, feel free to ping us with any questions. This repository is most actively maintained by @msmichellegar, @minaorangina, @nofootnotes, @iteles and @natalialkb. One of us will review any pull requests before merging into the main branch.
