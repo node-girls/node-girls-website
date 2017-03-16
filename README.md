@@ -23,4 +23,4 @@ Some quick tips:
 
 Please feel free to make pull requests and add your own chapter of Node Girls. More detailed instructions of how to contribute to this repository are coming. And hopefully, the website will be improved upon sometime soon.
 
-In the meantime, feel free to ping us with any questions. This repository is most actively maintained by @msmichellegar, @minaorangina, @nofootnotes, @iteles and @natalialkb. One of us will review any pull requests before merging into the main branch.
+In the meantime, feel free to ping us with any questions. This repository is most actively maintained by @msmichellegar, @minaorangina, @claireinez, @iteles and @natalialkb. One of us will review any pull requests before merging into the main branch.
