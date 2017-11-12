@@ -1,20 +1,26 @@
 [
   {
-    "date": "2018",
+    "date": "2018-01-20",
     "start_time": "10:00",
     "end_time": "16:00",
     "title": "Introduction to Node.js and JavaScript",
-    "link": "",
     "synopsis": "This is a combo workshop aimed at both absolute beginners and folk with some programming experience. Learn JavaScript and programming basics.  Or, learn to build your first server with Node.js.",
-    "venue": "",
-    "sponsors": []
+    "application_link": "",
+    "application_text": "Applications will open closer to the date 📅",
+    "venue": "Red Badger",
+    "sponsors": [
+      {
+        "name": "Red Badger",
+        "link": "https://red-badger.com/",
+        "logo": "https://red-badger.com/images/logos/redbadger_logo.png"
+      }
+    ]
   },
   {
     "date": "2017-09-30",
     "start_time": "10:00",
     "end_time": "16:00",
     "title": "Introduction to Node.js and JavaScript",
-    "link": "",
     "synopsis": "This is a combo workshop aimed at both absolute beginners and folk with some programming experience. Learn JavaScript and programming basics.  Or, learn to build your first server with Node.js.",
     "venue": "Ticketmaster",
     "sponsors": [
@@ -30,7 +36,6 @@
     "start_time": "10:00",
     "end_time": "16:00",
     "title": "Introduction to Node.js and JavaScript",
-    "link": "",
     "synopsis": "This is a combo workshop aimed at both absolute beginners and folk with some programming experience. Learn JavaScript and programming basics.  Or, learn to build your first server with Node.js.",
     "venue": "Pusher",
     "sponsors": [
@@ -46,7 +51,6 @@
     "start_time": "10:00",
     "end_time": "16:00",
     "title": "Introduction to Node.js",
-    "link": "",
     "synopsis": "Learn to build your first server with Node.js",
     "venue": "Pusher",
     "sponsors": [
@@ -62,7 +66,6 @@
     "start_time": "10:00",
     "end_time": "17:00",
     "title": "Introduction to JavaScript",
-    "link": "",
     "synopsis": "A beginner's introduction to JavaScript and programming.",
     "venue": "Qubit",
     "sponsors": [
@@ -83,14 +86,13 @@
     "start_time": "10:00",
     "end_time": "17:00",
     "title": "Introduction to Express",
-    "link": "",
     "synopsis": "Learn to build your first Node.js server with the popular Express framework.",
     "venue": "ThoughtWorks",
     "sponsors": [
       {
         "name": "ThoughtWorks",
         "link": "https://www.thoughtworks.com/",
-        "logo": "https://www.thoughtworks.com/imgs/tw-logo.png"
+        "logo": "http://www.acchajob.com/employerzone/companypic/05-05-2017-1493982363.jpg"
       }
     ]
   },
@@ -99,7 +101,6 @@
     "start_time": "10:00",
     "end_time": "17:00",
     "title": "Introduction to Node.js",
-    "link": "",
     "synopsis": "Learn to build your first server with Node.js",
     "venue": "StackOverflow",
     "sponsors": [
@@ -120,7 +121,6 @@
     "start_time": "10:00",
     "end_time": "17:00",
     "title": "Introduction to Node.js",
-    "link": "",
     "synopsis": "Learn to build your first server with Node.js",
     "venue": "StackOverflow",
     "sponsors": [
