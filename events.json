@@ -1,6 +1,6 @@
 [
   {
-    "date": "2017-09-30",
+    "date": "2018",
     "start_time": "10:00",
     "end_time": "16:00",
     "title": "Introduction to Node.js and JavaScript",
@@ -21,7 +21,7 @@
       {
         "name": "Ticketmaster",
         "link": "http://www.ticketmaster.com",
-        "logo": ""
+        "logo": "http://dohnncb4s7uno.cloudfront.net/sites/default/files/downloads/tmlogo_white.png"
       }
     ]
   },
@@ -37,7 +37,7 @@
       {
         "name": "Pusher",
         "link": "https://www.pusher.com/",
-        "logo": ""
+        "logo": "https://media.licdn.com/media/AAEAAQAAAAAAAAMiAAAAJDBiMDZlMTY4LTlhOGUtNGRjNC1iNWQ1LTg1NGY2MzU2ZmM4OQ.png"
       }
     ]
   },
@@ -53,7 +53,7 @@
       {
         "name": "Pusher",
         "link": "https://www.pusher.com/",
-        "logo": ""
+        "logo": "https://media.licdn.com/media/AAEAAQAAAAAAAAMiAAAAJDBiMDZlMTY4LTlhOGUtNGRjNC1iNWQ1LTg1NGY2MzU2ZmM4OQ.png"
       }
     ]
   },
@@ -69,12 +69,12 @@
       {
         "name": "Qubit",
         "link": "http://www.qubit.com/",
-        "logo": ""
+        "logo": "https://www.realwire.com/twitter_writeitfiles/Qubit_logo.jpg"
       },
       {
         "name": "Pusher",
         "link": "https://www.pusher.com/",
-        "logo": ""
+        "logo": "https://media.licdn.com/media/AAEAAQAAAAAAAAMiAAAAJDBiMDZlMTY4LTlhOGUtNGRjNC1iNWQ1LTg1NGY2MzU2ZmM4OQ.png"
       }
     ]
   },
@@ -90,7 +90,7 @@
       {
         "name": "ThoughtWorks",
         "link": "https://www.thoughtworks.com/",
-        "logo": ""
+        "logo": "https://www.thoughtworks.com/imgs/tw-logo.png"
       }
     ]
   },
@@ -111,7 +111,7 @@
       {
         "name": "StackOverflow",
         "link": "http://stackoverflow.com/",
-        "logo": ""
+        "logo": "https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.png"
       }
     ]
   },
@@ -125,14 +125,14 @@
     "venue": "StackOverflow",
     "sponsors": [
       {
-        "name": "PebbleCode",
+        "name": "Pebble Code",
         "link": "http://pebblecode.com/",
-        "logo": ""
+        "logo": "https://hapijs.com/public/img/logo-pebblecode.png"
       },
       {
         "name": "StackOverflow",
         "link": "http://stackoverflow.com/",
-        "logo": ""
+        "logo": "https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.png"
       }
     ]
   }
