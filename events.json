@@ -22,6 +22,8 @@
     "end_time": "16:00",
     "title": "Introduction to Node.js and JavaScript",
     "synopsis": "This is a combo workshop aimed at both absolute beginners and folk with some programming experience. Learn JavaScript and programming basics.  Or, learn to build your first server with Node.js.",
+    "application_link": "",
+    "application_text": "",
     "venue": "Ticketmaster",
     "sponsors": [
       {
@@ -37,6 +39,8 @@
     "end_time": "16:00",
     "title": "Introduction to Node.js and JavaScript",
     "synopsis": "This is a combo workshop aimed at both absolute beginners and folk with some programming experience. Learn JavaScript and programming basics.  Or, learn to build your first server with Node.js.",
+    "application_link": "",
+    "application_text": "",
     "venue": "Pusher",
     "sponsors": [
       {
@@ -52,6 +56,8 @@
     "end_time": "16:00",
     "title": "Introduction to Node.js",
     "synopsis": "Learn to build your first server with Node.js",
+    "application_link": "",
+    "application_text": "",
     "venue": "Pusher",
     "sponsors": [
       {
@@ -67,6 +73,8 @@
     "end_time": "17:00",
     "title": "Introduction to JavaScript",
     "synopsis": "A beginner's introduction to JavaScript and programming.",
+    "application_link": "",
+    "application_text": "",
     "venue": "Qubit",
     "sponsors": [
       {
@@ -87,6 +95,8 @@
     "end_time": "17:00",
     "title": "Introduction to Express",
     "synopsis": "Learn to build your first Node.js server with the popular Express framework.",
+    "application_link": "",
+    "application_text": "",
     "venue": "ThoughtWorks",
     "sponsors": [
       {
@@ -102,6 +112,8 @@
     "end_time": "17:00",
     "title": "Introduction to Node.js",
     "synopsis": "Learn to build your first server with Node.js",
+    "application_link": "",
+    "application_text": "",
     "venue": "StackOverflow",
     "sponsors": [
       {
@@ -122,6 +134,8 @@
     "end_time": "17:00",
     "title": "Introduction to Node.js",
     "synopsis": "Learn to build your first server with Node.js",
+    "application_link": "",
+    "application_text": "",
     "venue": "StackOverflow",
     "sponsors": [
       {
