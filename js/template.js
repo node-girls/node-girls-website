@@ -20,7 +20,17 @@ function sort (data) {
 }
 
 function handleData ({ futureEvents, pastEvents }) {
-  const futureHTML = futureEvents.reduce(generateHTML, '');
+  let futureHTML;
+  if (futureEvents.length === 0) {
+    futureHTML =
+      '<p class="flow-text no-events-text">\
+      More events to be announced soon.<br/>Check back here or \
+      <a target="_blank" href="https://www.twitter.com/nodegirlslondon">on Twitter</a> \
+      for updates!\
+      </p>';
+  } else {
+    futureHTML = futureEvents.reduce(generateHTML, '');
+  }
   const pastHTML = pastEvents.reduce(generateHTML, '');
   return { futureHTML, pastHTML };
 }
