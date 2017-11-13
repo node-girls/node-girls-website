@@ -1,15 +1,7 @@
-Date.prototype.yyyymmdd = function () {
- let mm = this.getMonth() + 1; // getMonth() is zero-based
- let dd = this.getDate();
-
- return [this.getFullYear(),
-         (mm > 9 ? '' : '0') + mm,
-         (dd > 9 ? '' : '0') + dd
-       ].join('-');
-};
 const template = document.querySelector('#event-template').innerHTML;
 const destination = document.querySelector('.events');
 const jsonUrl = "https://rawgit.com/node-girls/node-girls-website/json/events.json";
+const TODAY = moment().format('YYYY-MM-DD');
 
 fetch(jsonUrl)
   .then(res => res.json())
@@ -22,9 +14,8 @@ fetch(jsonUrl)
   .catch(console.err);
 
 function sort (data) {
-  const now = new Date().yyyymmdd();
-  const futureEvents = data.filter(event => event.date >= now);
-  const pastEvents = data.filter(event => event.date < now);
+  const futureEvents = data.filter(event => event.date >= TODAY);
+  const pastEvents = data.filter(event => event.date < TODAY);
   return { futureEvents, pastEvents };
 }
 
@@ -34,29 +25,42 @@ function handleData ({ futureEvents, pastEvents }) {
   return { futureHTML, pastHTML };
 }
 
+/***************/
+
 function generateHTML (finalHTML, event) {
   let currentEventHTML = template;
+
   for (let key in event) {
-    if (key === 'date') {
-      currentEventHTML = currentEventHTML.replace(/{{date}}/, moment(event.date).format('dddd Do MMMM YYYY'));
-    } else if (key === 'application_text') {
-      let text = '';
-      // if the event is in the future, include application text
-      if (moment(event.date).isAfter(new Date().yyyymmdd()))  {
-        text = `<span class="application-text">${event.application_text}</span>`;
-        // add a link if there is one
-        if (event.application_link && event.application_link.length > 0) {
-          text = `<a href="${event.application_link}">${text}</a>`;
-        }
-      }
-      currentEventHTML = currentEventHTML.replace(/{{application_text}}/, text);
-    } else if (key === 'sponsors') {
-      currentEventHTML = currentEventHTML.replace(/{{sponsors}}/, generateSponsors(event.sponsors));
-    } else {
-      currentEventHTML = currentEventHTML.replace(new RegExp('{{' + key + '}}', 'g'), event[key] || 'TBC');
+    let value = '';
+    switch (key) {
+    case 'date':
+      value = moment(event.date).format('dddd Do MMMM YYYY');
+      break;
+    case 'application_text':
+      value = generateApplicationText(event);
+      break;
+    case 'sponsors':
+      value = generateSponsors(event.sponsors);
+      break;
+    default:
+      value =  event[key] || 'TBC'
     }
+    currentEventHTML = currentEventHTML.replace(new RegExp('{{' + key + '}}', 'g'), value);
   }
   return finalHTML + currentEventHTML;
+}
+
+function generateApplicationText (event) {
+  // if the event is in the future, include application text
+  // add a link if there is one
+  let text = '';
+  if (moment(event.date).isAfter(TODAY))  {
+    text = `<span class="application-text">${event.application_text}</span>`;
+    if (event.application_link && event.application_link.length > 0) {
+      text = `<a href="${event.application_link}">${text}</a>`;
+    }
+  }
+  return text;
 }
 
 function generateSponsors (sponsors) {
