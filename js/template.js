@@ -8,8 +8,8 @@ fetch(jsonUrl)
   .then(sort)
   .then(handleData)
   .then(({ futureHTML, pastHTML }) => {
-    document.querySelector('.future-events').innerHTML = futureHTML;
-    document.querySelector('.past-events').innerHTML = pastHTML;
+    document.querySelector('.future-events-container').innerHTML = futureHTML;
+    document.querySelector('.past-events-container').innerHTML = pastHTML;
   })
   .catch(console.err);
 
