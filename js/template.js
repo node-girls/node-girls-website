@@ -1,6 +1,12 @@
 const template = document.querySelector('#event-template').innerHTML;
 const destination = document.querySelector('.events');
-const jsonUrl = "https://rawgit.com/node-girls/node-girls-website/json/events.json";
+
+// both of these urls point to the same thing
+// devUrl reflects changes more quickly
+const prodUrl = "https://cdn.rawgit.com/node-girls/node-girls-website/json/events.json";
+const devUrl = "https://rawgit.com/node-girls/node-girls-website/json/events.json";
+
+const jsonUrl = prodUrl; // change to devUrl as necessary
 const TODAY = moment().format('YYYY-MM-DD');
 
 fetch(jsonUrl)
