@@ -1,33 +1,42 @@
-const template = document.querySelector('#event-template').innerHTML;
-const destination = document.querySelector('.events');
+var template = document.querySelector('#event-template').innerHTML;
+var destination = document.querySelector('.events');
 
 // both of these urls point to the same thing
 // devUrl reflects changes more quickly
-const prodUrl = "https://cdn.rawgit.com/node-girls/node-girls-website/json/events.json";
-const devUrl = "https://rawgit.com/node-girls/node-girls-website/json/events.json";
+var prodUrl = "https://cdn.rawgit.com/node-girls/node-girls-website/json/events.json";
+var devUrl = "https://rawgit.com/node-girls/node-girls-website/json/events.json";
 
-const jsonUrl = prodUrl; // change to devUrl as necessary
-const TODAY = moment().format('YYYY-MM-DD');
+var jsonUrl = prodUrl; // change to devUrl as necessary
+var TODAY = moment().format('YYYY-MM-DD');
 
 fetch(jsonUrl)
-  .then(res => res.json())
+  .then(function (res) {
+    return res.json();
+  })
   .then(sort)
   .then(handleData)
-  .then(({ futureHTML, pastHTML }) => {
-    document.querySelector('.future-events-container').innerHTML = futureHTML;
-    document.querySelector('.past-events-container').innerHTML = pastHTML;
+  .then(function (html) {
+    document.querySelector('.future-events-container').innerHTML = html.futureHTML;
+    document.querySelector('.past-events-container').innerHTML = html.pastHTML;
   })
   .catch(console.err);
 
 function sort (data) {
-  const futureEvents = data.filter(event => event.date >= TODAY);
-  const pastEvents = data.filter(event => event.date < TODAY);
-  return { futureEvents, pastEvents };
+  var futureEvents = data.filter(function (event) {
+    return event.date >= TODAY;
+  });
+  var pastEvents = data.filter(function (event) {
+    return event.date < TODAY;
+  });
+  return {
+    futureEvents: futureEvents,
+    pastEvents: pastEvents
+  };
 }
 
-function handleData ({ futureEvents, pastEvents }) {
-  let futureHTML;
-  if (futureEvents.length === 0) {
+function handleData (events) {
+  var futureHTML;
+  if (events.futureEvents.length === 0) {
     futureHTML =
       '<p class="flow-text no-events-text">\
       More events to be announced soon.<br/>Check back here or \
@@ -35,19 +44,22 @@ function handleData ({ futureEvents, pastEvents }) {
       for updates!\
       </p>';
   } else {
-    futureHTML = futureEvents.reduce(generateHTML, '');
+    futureHTML = events.futureEvents.reduce(generateHTML, '');
   }
-  const pastHTML = pastEvents.reduce(generateHTML, '');
-  return { futureHTML, pastHTML };
+  var pastHTML = events.pastEvents.reduce(generateHTML, '');
+  return {
+    futureHTML: futureHTML,
+    pastHTML: pastHTML
+  };
 }
 
 /***************/
 
 function generateHTML (finalHTML, event) {
-  let currentEventHTML = template;
+  var currentEventHTML = template;
 
-  for (let key in event) {
-    let value = '';
+  for (var key in event) {
+    var value = '';
     switch (key) {
     case 'date':
       value = moment(event.date).format('dddd Do MMMM YYYY');
@@ -59,7 +71,7 @@ function generateHTML (finalHTML, event) {
       value = generateSponsors(event.sponsors);
       break;
     default:
-      value =  event[key] || 'TBC'
+      value = event[key] || 'TBC'
     }
     currentEventHTML = currentEventHTML.replace(new RegExp('{{' + key + '}}', 'g'), value);
   }
@@ -69,11 +81,11 @@ function generateHTML (finalHTML, event) {
 function generateApplicationText (event) {
   // if the event is in the future, include application text
   // add a link if there is one
-  let text = '';
+  var text = '';
   if (moment(event.date).isAfter(TODAY))  {
-    text = `<span class="application-text">${event.application_text}</span>`;
+    text = '<span class="application-text">' + event.application_text + '</span>';
     if (event.application_link && event.application_link.length > 0) {
-      text = `<a href="${event.application_link}">${text}</a>`;
+      text = '<a href="' + event.application_link + '">' + text + '</a>';
     }
   }
   return text;
@@ -81,9 +93,9 @@ function generateApplicationText (event) {
 
 function generateSponsors (sponsors) {
   return sponsors.reduce((html, sponsor) => {
-    html = html + `<a target="_blank" href="${sponsor.link}">
-      <img class="sponsor" src="${sponsor.logo}" alt="${sponsor.name}">
-    </a>`
+    html = html + '<a target="_blank" href="' + sponsor.link + '">\
+      <img class="sponsor" src="' + sponsor.logo + '" alt="' + sponsor.name + '">\
+    </a>'
     return html;
   }, '');
 }
