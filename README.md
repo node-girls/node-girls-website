@@ -12,6 +12,8 @@ For local access, clone the repo from [here](https://github.com/node-girls/node-
 
 Our page is running on [gh-pages](https://pages.github.com/). To see your changes locally, open the page you are editing in a browser.
 
+To update event data, [follow this guide](updating-site.md)
+
 ## How to contribute?
 
 This project is basic frontend HTML and CSS, built using the Materialize CSS library and deployed via [GitHub Pages](https://pages.github.com/).
