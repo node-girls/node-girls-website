@@ -25,7 +25,6 @@ fetch(DATA_URL)
   .then(handleData)
   .then(function (html) {
     document.querySelector('.future-events-container').innerHTML = html.futureHTML;
-    document.querySelector('.past-events-container').innerHTML = html.pastHTML;
   })
   .catch(console.err);
 
@@ -33,12 +32,8 @@ function sort (data) {
   var futureEvents = data.filter(function (event) {
     return event.date >= TODAY;
   });
-  var pastEvents = data.filter(function (event) {
-    return event.date < TODAY;
-  });
   return {
-    futureEvents: futureEvents,
-    pastEvents: pastEvents
+    futureEvents: futureEvents
   };
 }
 
@@ -54,10 +49,8 @@ function handleData (events) {
   } else {
     futureHTML = events.futureEvents.reduce(generateHTML, '');
   }
-  var pastHTML = events.pastEvents.reduce(generateHTML, '');
   return {
-    futureHTML: futureHTML,
-    pastHTML: pastHTML
+    futureHTML: futureHTML
   };
 }
 
