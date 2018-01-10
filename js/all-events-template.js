@@ -1,22 +1,3 @@
-var template = document.querySelector('#event-template').innerHTML;
-var destination = document.querySelector('.events');
-
-
-// PRODUCTION URL
-// prodUrl requires the latest commit hash for the `json` branch (the merge commit from the last PR)
-// Can be the short or long version.
-var commitHash = "04a6741";
-var prodUrl = "https://cdn.rawgit.com/node-girls/node-girls-website/" + commitHash + "/events.json";
-
-// DEVELOPMENT URL
-// To see if your updated events.json is working, set this variable to the name
-// of the branch you're working from (after you've pushed to GitHub)
-var yourWorkingBranchName = "";
-var devUrl = "https://rawgit.com/node-girls/node-girls-website/" + yourWorkingBranchName + "/events.json";
-
-var DATA_URL = prodUrl; // change to devUrl as necessary
-var TODAY = moment().format('YYYY-MM-DD');
-
 fetch(DATA_URL)
   .then(function (res) {
     return res.json();
