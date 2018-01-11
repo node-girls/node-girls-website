@@ -67,7 +67,7 @@ function generateApplicationText (event) {
   if (moment(event.date).isAfter(TODAY))  {
     text = '<span class="application-text">' + event.application_text + '</span>';
     if (event.application_link && event.application_link.length > 0) {
-      text = '<a href="' + event.application_link + '" target="_blank">' + text + '</a>';
+      text = '<a href="' + event.application_link + '">' + text + '</a>';
     }
   }
   return text;
