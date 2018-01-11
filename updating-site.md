@@ -7,12 +7,13 @@ At the bottom of the html page is a template.  Anything wrapped in `{{handlebars
 
 `js/all-events-template.js` and `js/next-event-template.js` fetch the JSON from [RawGit](https://rawgit.com/), which hosts files in your GitHub on a CDN for free.  Then the templates are populated with the relevant data and injected into the page.
 
+Our JSON lives inside the [events-data repo](https://github.com/node-girls/events-data).
+
 # Instructions
 
 
-
 ### Step 1 - edit the JSON
-- Go to the [`events-json` repo](https://github.com/node-girls/events-data) and create a new branch off master
+- Go to the [events-data repo](https://github.com/node-girls/events-data) and create a new branch off master
 
 - Edit the `events.json` file (see the **Data Structure** section [here](https://github.com/node-girls/events-data#data-structure))
 

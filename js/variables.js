@@ -5,7 +5,7 @@ var destination = document.querySelector('.events');
 // PRODUCTION URL
 // this requires the latest commit hash in the events-data repo (the merge commit from the last PR)
 // Can be the short or long version.
-var commitHash = "04a6741";
+var commitHash = "52fd954";
 var prodUrl = "https://cdn.rawgit.com/node-girls/events-data/" + commitHash + "/events.json";
 
 // DEVELOPMENT URL
@@ -18,7 +18,6 @@ var devUrl = "https://rawgit.com/node-girls/events-data/" + yourWorkingBranchNam
 // Use if you are serving your events-data repo from a local server (e.g. simple-http-server)
 var localUrl = ""
 
-var DATA_URL = devUrl; // change to devUrl or localURL as necessary
-
+var DATA_URL = prodUrl; // change to devUrl or localURL as necessary
 
 var TODAY = moment().format('YYYY-MM-DD');
