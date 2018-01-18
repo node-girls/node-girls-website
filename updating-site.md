@@ -37,13 +37,13 @@ The URLs for the events data look like this:
 ### Step 3 - update the website's CDN link
 After the PR for the event data is merged:
 
-- Create a new branch off `gh-pages`
+- Create a new branch off `master`
 
 - In the events-data repo, grab the latest commit hash from master.
 
 - In `js/variables.js`, assign it to the `commitHash` variable.
 
-- Raise a PR to `gh-pages`
+- Raise a PR to `master`
 
 
 ## ⏳ The passage of time ⏳
