@@ -49,10 +49,26 @@ p {
 
 .photo-container {
   text-align: center;
+  display: flex;
 }
 
 .photo {
   width: 100%;
+}
+
+.carousel-button {
+  margin: auto;
+  font-size: 3em;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.centre-cropped {
+  width: 100px;
+  height: 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .main-container {
