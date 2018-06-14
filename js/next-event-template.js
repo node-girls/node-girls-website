@@ -11,7 +11,6 @@ fetch(DATA_URL)
   .catch(console.err);
 
 function sort(data) {
-  debugger;
   var futureEvents = data.filter(function(event) {
     return event.date >= TODAY;
   });
@@ -40,7 +39,6 @@ function handleData(events) {
 /***************/
 
 function generateHTML(finalHTML, event) {
-  debugger;
   var currentEventHTML = template;
 
   for (var key in event) {

@@ -9,10 +9,13 @@
 
   <title>Node Girls</title>
 
+
   <!-- CSS  -->
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/siema@1.5.1/dist/siema.min.js"></script>
+
   <script>
     (function (i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -30,11 +33,12 @@
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <ul class="hide-on-med-and-down nav-list nav-list--with-image">
-        <li class="nav-list__list-item">
+
+      <ul class="hide-on-med-and-down nav-list nav-list--home">
+        <li class="nav-list__list-item nav-list__list-item--home">
           <a href="./chapters.html">Chapters</a>
         </li>
-        <li class="nav-list__list-item">
+        <li class="nav-list__list-item nav-list__list-item--home">
           <a href="./events.html">Events</a>
         </li>
         <li class="nav-list__logo">
@@ -42,11 +46,11 @@
             <img alt="Node Girls Logo" src="./images/ng-logo.svg">
           </a>
         </li>
-        <li class="nav-list__list-item">
+        <li class="nav-list__list-item nav-list__list-item--home">
           <a href="./resources.html">Resources</a>
         </li>
-        <li class="nav-list__list-item">
-          <a href="./about.html">About Us</a>
+        <li class="nav-list__list-item nav-list__list-item--home">
+          <a href="./about">About Us</a>
         </li>
       </ul>
 
@@ -71,7 +75,7 @@
             <a href="./resources.html">Resources</a>
           </li>
           <li>
-            <a href="./about.html">About Us</a>
+            <a href="./about">About Us</a>
           </li>
         </ul>
       </button>
@@ -79,50 +83,58 @@
     </div>
   </nav>
 
-  <main>
+  <main class="container">
 
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="team-container">
-          <h3 class="header center green-text">CHAPTERS</h3>
-          <hr class="why-text-container__divider" />
-          <div class="row center">
-            <h5 class="header col s12 light">
-              There are currently Node Girls chapters running around the world.
-            </h5>
-            <h5 class="header col s12 light">
-              If you don't see your city, get in contact with us to start your own!
-            </h5>
+    <div class="main-container">
+      <h3 class="header center green-text">About Us</h3>
+
+      <p class="flow-text">Back in 2015, a small group of coding newbies from London wondered why there were no communities for women, non-binary and trans folk
+        learning JavaScript and Node.js. So they decided to fix that.
+      <p class="flow-text">
+        Later that year, Node Girls was created.
+      </p>
+      </p>
+      <p class="flow-text">
+        Inspired by the likes of Rails Girls and Django Girls, we run free, one-day workshops, where folk can learn to code
+        in a friendly, non-intimidating environment.
+      </p>
+      <p class="flow-text">
+        We put a big emphasis on making our events as accessible and inclusive as possible.
+      </p>
+      <p class="flow-text">
+        The community that has grown over the years, and we continue to support each other and share the coding love!
+      </p>
+      <div class="photo-container">
+
+        <div class="prev-photo carousel-button">👈</div>
+        <div class="siema">
+          <div>
+            <img class="photo" src="https://pbs.twimg.com/media/DK-Rq3uW0AAFZHS.jpg:large" />
+          </div>
+          <div>
+            <img class="photo" src="https://pbs.twimg.com/media/DVdnxtXWsAAcdbU.jpg:large" />
+          </div>
+          <div>
+            <img class="photo" src="https://pbs.twimg.com/media/DVHbNUoWsAAxk2B.jpg:large" />
+          </div>
+          <div>
+            <img class="photo" src="https://pbs.twimg.com/media/DLt1Lb7WkAAdMDd.jpg:large">
+          </div>
+          <div>
+            <img class="photo" src="https://pbs.twimg.com/media/DVH4-mkW0AEBHd-.jpg:large" />
           </div>
         </div>
-        <div class="chapter-images-container">
-          <div class="row center">
-            <h5 class="header col s12 green-text">
-              Cities
-            </h5>
-          </div>
-          <div class="row center">
-            <div class="col s12 m6 l4 row center">
-              <a href="london.html">
-                <div class="chapter-image london"></div>
-              </a>
-              <h5>London</h5>
-            </div>
-            <div class="col s12 m6 l4 row center">
-              <a href="sydney.html">
-                <div class="chapter-image sydney"></div>
-              </a>
-              <h5>Sydney</h5>
-            </div>
-            <div class="col s12 m6 l4 row center">
-              <a href="melbourne.html">
-                <div class="chapter-image melbourne"></div>
-              </a>
-              <h5>Melbourne</h5>
-            </div>
-          </div>
-        </div>
+
+        
+        <div class="next-photo carousel-button">👉</div>
       </div>
+
+      <br /> <br /> <br />
+      <h4 class="header center green-text">Can I have a Node Girls in my city?</h4>
+      <p class="flow-text" style="text-align: center">
+        If you'd like to start a chapter where you live, please get in contact with us at:<br />
+        <a class="green-text" href="mailto:nodegirlslondon@gmail.com">nodegirlslondon@gmail.com</a>
+      </p>
     </div>
 
   </main>
@@ -150,7 +162,7 @@
               </a>
             </li>
             <li class="social-icons__icon">
-              <a target="_blank" class="white-text" href="mailto:nodegirlslondon@gmail.com">
+              <a class="white-text" href="mailto:nodegirlslondon@gmail.com">
                 <i class="fa fa-envelope-o fa-3x"></i>
               </a>
             </li>
@@ -165,6 +177,14 @@
       </div>
     </div>
   </footer>
+
+
+  <!--  Scripts-->
+  <script>
+    const mySiema = new Siema({loop: true, duration: 400})
+    document.querySelector('.prev-photo').addEventListener('click', () => mySiema.prev())
+    document.querySelector('.next-photo').addEventListener('click', () => mySiema.next())
+  </script>
 </body>
 
 </html>
