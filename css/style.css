@@ -40,6 +40,15 @@ p {
 }
 
 .photo-container {
+  text-align: center;
+}
+
+.photo {
+  width: 100%;
+}
+
+.main-container {
+  min-height: 80%;
 }
 
 @media only screen and (max-width: 992px) {
