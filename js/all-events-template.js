@@ -81,6 +81,9 @@ function generateApplicationText (event) {
 }
 
 function generateSponsors (sponsors) {
+  if (sponsors.length === 0) {
+    return '';
+  } 
   return sponsors.reduce((html, sponsor) => {
     html = html + '<a target="_blank" href="' + sponsor.link + '">\
       <img class="sponsor" src="' + sponsor.logo + '" alt="' + sponsor.name + '">\
