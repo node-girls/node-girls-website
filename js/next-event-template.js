@@ -79,6 +79,9 @@ function generateApplicationText(event) {
 }
 
 function generateSponsors(sponsors) {
+  if (sponsors.length === 0) {
+    return "";
+  } 
   return sponsors.reduce((html, sponsor) => {
     html =
       html +
