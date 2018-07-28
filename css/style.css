@@ -422,6 +422,13 @@ footer .social-icons__icon {
   margin: 1em auto;
 }
 
+.chapter-image:hover,
+.chapter-image:focus {
+  -webkit-box-shadow: 2px 0px 66px -9px rgba(0,0,0,0.7);
+  -moz-box-shadow: 2px 0px 66px -9px rgba(0,0,0,0.7);
+  box-shadow: 2px 0px 66px -9px rgba(0,0,0,0.7);
+}
+
 .london {
   background-image: url("../images/chapters/london.jpg");
 }
