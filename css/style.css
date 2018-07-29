@@ -366,7 +366,10 @@ svg {
 }
 
 .why-image {
+  object-fit: cover;
   width: 100%;
+  height: 350px;
+  margin-bottom: 1em;
 }
 
 /***************************
@@ -424,6 +427,7 @@ footer .social-icons__icon {
 
 .chapter-image:hover,
 .chapter-image:focus {
+  transition: box-shadow 0.3s ease-out;
   -webkit-box-shadow: 2px 0px 66px -9px rgba(0,0,0,0.7);
   -moz-box-shadow: 2px 0px 66px -9px rgba(0,0,0,0.7);
   box-shadow: 2px 0px 66px -9px rgba(0,0,0,0.7);
@@ -439,6 +443,22 @@ footer .social-icons__icon {
 
 .stockholm {
   background-image: url("../images/chapters/stockholm.jpg");
+}
+
+.contact-chapter-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #67ac5b;
+}
+.contact-chapter-container h5 {
+  display: inline;
+}
+
+.contact-chapter-container ul li:hover,
+.contact-chapter-container ul li:focus, {
+  color: #67ac5b;
 }
 
 /***************************
