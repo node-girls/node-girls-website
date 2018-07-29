@@ -564,6 +564,10 @@ a.grey-text {
   width: 16px;
 }
 
+.chip {
+  text-transform: capitalize;
+}
+
 /***************************
   MISC
 ***************************/
