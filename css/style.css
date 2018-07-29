@@ -378,6 +378,7 @@ svg {
 
 footer.page-footer {
   margin: 0;
+  background-image: linear-gradient(to right, #67ac5b, #599b4b, #2f6b1c);
 }
 
 .row .footer__contact {
