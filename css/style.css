@@ -366,7 +366,10 @@ svg {
 }
 
 .why-image {
+  object-fit: cover;
   width: 100%;
+  height: 350px;
+  margin-bottom: 1em;
 }
 
 /***************************
@@ -375,6 +378,7 @@ svg {
 
 footer.page-footer {
   margin: 0;
+  background-image: linear-gradient(to right, #67ac5b, #599b4b, #2f6b1c);
 }
 
 .row .footer__contact {
@@ -422,16 +426,40 @@ footer .social-icons__icon {
   margin: 1em auto;
 }
 
+.chapter-image:hover,
+.chapter-image:focus {
+  transition: box-shadow 0.3s ease-out;
+  -webkit-box-shadow: 2px 0px 66px -9px rgba(0,0,0,0.7);
+  -moz-box-shadow: 2px 0px 66px -9px rgba(0,0,0,0.7);
+  box-shadow: 2px 0px 66px -9px rgba(0,0,0,0.7);
+}
+
 .london {
   background-image: url("../images/chapters/london.jpg");
 }
 
-.sydney {
+.australia {
   background-image: url("../images/chapters/sydney.jpg");
 }
 
-.melbourne {
-  background-image: url("../images/chapters/melbourne.jpg");
+.stockholm {
+  background-image: url("../images/chapters/stockholm.jpg");
+}
+
+.contact-chapter-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #67ac5b;
+}
+.contact-chapter-container h5 {
+  display: inline;
+}
+
+.contact-chapter-container ul li:hover,
+.contact-chapter-container ul li:focus, {
+  color: #67ac5b;
 }
 
 /***************************
@@ -535,6 +563,10 @@ a.grey-text {
 .inline-clock-icon svg {
   height: 16px;
   width: 16px;
+}
+
+.chip {
+  text-transform: capitalize;
 }
 
 /***************************

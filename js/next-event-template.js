@@ -1,3 +1,6 @@
+/*
+  Used for index.html and events.html
+*/
 fetch(DATA_URL)
   .then(function(res) {
     return res.json();
@@ -53,6 +56,8 @@ function generateHTML(finalHTML, event) {
       case "sponsors":
         value = generateSponsors(event.sponsors);
         break;
+      case "city":
+        value = event.city;
       default:
         value = event[key] || "TBC";
     }
@@ -81,7 +86,7 @@ function generateApplicationText(event) {
 function generateSponsors(sponsors) {
   if (sponsors.length === 0) {
     return "";
-  } 
+  }
   return sponsors.reduce((html, sponsor) => {
     html =
       html +
