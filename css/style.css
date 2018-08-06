@@ -522,8 +522,13 @@ footer .social-icons__icon {
 }
 
 .application-text {
-  display: inline-block;
+  display: block;
   margin-top: 25px;
+}
+
+.application-text a {
+  margin: 10px 0;
+  display: block;
 }
 
 .team-image__small {
