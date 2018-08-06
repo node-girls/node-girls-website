@@ -52,11 +52,7 @@ function generateHTML(finalHTML, event) {
         break;
       case "application_data":
         value = composeApplicationText(event);
-        console.info(value);
         break;
-        // case "application_text":
-        // value = generateApplicationText(event);
-        // break;
       case "sponsors":
         value = generateSponsors(event.sponsors);
         break;
