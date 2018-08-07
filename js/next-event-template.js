@@ -50,8 +50,8 @@ function generateHTML(finalHTML, event) {
       case "date":
         value = moment(event.date).format("dddd Do MMMM YYYY");
         break;
-      case "application_text":
-        value = generateApplicationText(event);
+      case "application_data":
+        value = composeApplicationText(event);
         break;
       case "sponsors":
         value = generateSponsors(event.sponsors);
@@ -60,13 +60,24 @@ function generateHTML(finalHTML, event) {
         value = event.city;
       default:
         value = event[key] || "TBC";
+      }
+      currentEventHTML = currentEventHTML.replace(
+        new RegExp("{{" + key + "}}", "g"),
+        value
+      );
     }
-    currentEventHTML = currentEventHTML.replace(
-      new RegExp("{{" + key + "}}", "g"),
-      value
-    );
-  }
-  return finalHTML + currentEventHTML;
+    return finalHTML + currentEventHTML;
+}
+
+function composeApplicationText(eventArr) {
+  let result = '<span class="application-text">';
+  return eventArr.application_data.reduce((acc, event, i) => {
+    acc += generateApplicationText(event);
+    if (i === eventArr.length - 1) {
+      return acc += '</span>';
+    }
+    return acc;
+  }, result);
 }
 
 function generateApplicationText(event) {
@@ -75,7 +86,7 @@ function generateApplicationText(event) {
   var text = "";
   if (moment(event.date).isAfter(TODAY)) {
     text =
-      '<span class="application-text">' + event.application_text + "</span>";
+      '<span>' + event.application_text + "</span>";
     if (event.application_link && event.application_link.length > 0) {
       text = '<a href="' + event.application_link + '">' + text + "</a>";
     }
