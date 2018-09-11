@@ -16,7 +16,7 @@ var devUrl = "https://rawgit.com/node-girls/events-data/" + yourWorkingBranchNam
 
 // LOCAL URL
 // Use if you are serving your events-data repo from a local server (e.g. simple-http-server)
-var localUrl = ""
+var localUrl = "f8b482a"
 
 var DATA_URL = prodUrl; // change to devUrl or localURL as necessary
 

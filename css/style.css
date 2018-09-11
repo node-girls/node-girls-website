@@ -446,6 +446,10 @@ footer .social-icons__icon {
   background-image: url("../images/chapters/stockholm.jpg");
 }
 
+.oxford {
+  background-image: url("../images/chapters/oxford.jpg")
+}
+
 .contact-chapter-container {
   width: 80%;
   margin: 0 auto;
