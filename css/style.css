@@ -49,8 +49,15 @@ h3 {
   margin: 0.82rem 0 0.656rem 0;
 }
 
-* {
-  outline: unset;
+.strapline {
+  font-size: 1.64rem;
+  line-height: 1.1;
+  margin: 0.82rem 0 0.656rem 0;
+}
+
+.image-overlay-text {
+  font-size: 2.28rem;
+  line-height: 110%;
 }
 
 .icon-block {
@@ -407,6 +414,11 @@ footer.page-footer {
   padding: 0 1em;
 }
 
+.footer__contact-title {
+  font-size: 1.64rem;
+  line-height: 1.1;
+}
+
 .footer__mailto {
   color: #ffffff;
   text-decoration: underline;
@@ -428,6 +440,8 @@ footer .social-icons__icon {
   padding: 0 0.7em;
 }
 
+
+
 /***************************
   CHAPTERS
 ***************************/
@@ -446,6 +460,11 @@ footer .social-icons__icon {
   background-position: center center;
   background-repeat: no-repeat;
   margin: 1em auto;
+}
+
+.chapter-image-title {
+  font-size: 1.64rem;
+  line-height: 110%;
 }
 
 .chapter-image:hover,
