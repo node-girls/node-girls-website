@@ -215,7 +215,7 @@
   <script src="js/moment.min.js"></script>
   <script id="event-template" type="text/template">
     <div class="event-container">
-      <a href='{{city}}.html'><div class="chip">{{city}}</div></a>
+      <a href='{{city}}.html'><div class="chip">{{city_display}}</div></a>
       <h5 class="header light event-container__header">{{date}}</h5>
       <h5 class="header time">
         <span class="inline-clock-icon">
@@ -249,6 +249,7 @@
       </div>
     </div>
   </script>
+  <script src="js/object-assign.min.js"></script>
   <script src="js/variables.js"></script>
   <script src="js/next-event-template.js" type="text/javascript"></script>
 

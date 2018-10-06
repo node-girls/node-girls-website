@@ -416,8 +416,8 @@ footer .social-icons__icon {
 }
 
 .chapter-image {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   display: block;
   border-radius: 100%;
   background-size: cover;
@@ -438,8 +438,8 @@ footer .social-icons__icon {
   background-image: url("../images/chapters/london.jpg");
 }
 
-.australia {
-  background-image: url("../images/chapters/sydney.jpg");
+.tel-aviv {
+  background-image: url("../images/chapters/telaviv.jpg");
 }
 
 .stockholm {

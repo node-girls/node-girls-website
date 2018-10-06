@@ -28,7 +28,7 @@ function handleData(events) {
     futureHTML =
       '<p class="flow-text no-events-text">\
       More events to be announced soon.<br/>Check back here or \
-      <a target="_blank" href="https://www.twitter.com/nodegirlslondon">on Twitter</a> \
+      <a target="_blank" href="https://www.twitter.com/nodegirls">on Twitter</a> \
       for updates!\
       </p>';
   } else {
