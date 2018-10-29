@@ -111,8 +111,6 @@
         The community that has grown over the years, and we continue to support each other and share the coding love!
       </p>
       <div class="photo-container">
-
-        <!-- <div class="prev-photo carousel-button">👈</div> -->
         <div class="slider">
           <div>
             <img class="photo" src="images/showcase/tm-arms-up.jpg" />
@@ -130,9 +128,6 @@
             <img class="photo" src="images/showcase/redbadger-portrait.jpg" />
           </div>
         </div>
-
-
-        <!-- <div class="next-photo carousel-button">👉</div> -->
       </div>
 
       <br /> <br /> <br />
@@ -194,7 +189,7 @@
   <!--  Scripts-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/min/tiny-slider.js"></script>
   <script>
-    const slider = tns({
+    var slider = tns({
       container: '.slider',
       slideBy: 'page',
       speed: 500,
@@ -204,7 +199,6 @@
       autoplayTimeout: 3200,
       autoplayButtonOutput: false
     })
-    console.log(slider)
     slider.play()
   </script>
 </body>
