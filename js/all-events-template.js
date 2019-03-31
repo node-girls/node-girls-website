@@ -5,6 +5,7 @@ fetch(DATA_URL)
   .then(function(res) {
     return res.json();
   })
+  .then(filterLondon)
   .then(sort)
   .then(handleData)
   .then(function(html) {
@@ -15,17 +16,27 @@ fetch(DATA_URL)
   .catch(console.err);
 
 function sort(data) {
-  // filters out non-London events
   var futureEvents = data.filter(function(event) {
-    return event.city === "london" && event.date >= TODAY;
+    return event.date >= TODAY;
   });
   var pastEvents = data.filter(function(event) {
-    return event.city === "london" && event.date < TODAY;
+    return event.date < TODAY;
   });
+
   return {
     futureEvents: futureEvents,
     pastEvents: pastEvents
   };
+}
+
+function filterLondon(data) {
+  // filters out non-London events
+  if (document.URL.indexOf('/events') !== 0) {
+    return data;
+  }
+  return data.filter(function(event) {
+    return event.city === 'london';
+  });
 }
 
 function handleData(events) {
