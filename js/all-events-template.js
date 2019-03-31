@@ -9,9 +9,9 @@ fetch(DATA_URL)
   .then(sort)
   .then(handleData)
   .then(function(html) {
-    document.querySelector(".future-events-container").innerHTML =
+    document.querySelector('.future-events-container').innerHTML =
       html.futureHTML;
-    document.querySelector(".past-events-container").innerHTML = html.pastHTML;
+    document.querySelector('.past-events-container').innerHTML = html.pastHTML;
   })
   .catch(console.err);
 
@@ -49,9 +49,9 @@ function handleData(events) {
       for updates!\
       </p>';
   } else {
-    futureHTML = events.futureEvents.reduce(generateHTML, "");
+    futureHTML = events.futureEvents.reduce(generateHTML, '');
   }
-  var pastHTML = events.pastEvents.reduce(generateHTML, "");
+  var pastHTML = events.pastEvents.reduce(generateHTML, '');
   return {
     futureHTML: futureHTML,
     pastHTML: pastHTML
@@ -64,22 +64,22 @@ function generateHTML(finalHTML, event) {
   var currentEventHTML = template;
 
   for (var key in event) {
-    var value = "";
+    var value = '';
     switch (key) {
-      case "date":
-        value = moment(event.date).format("dddd Do MMMM YYYY");
+      case 'date':
+        value = moment(event.date).format('dddd Do MMMM YYYY');
         break;
-      case "application_data":
+      case 'application_data':
         value = composeApplicationText(event);
         break;
-      case "sponsors":
+      case 'sponsors':
         value = generateSponsors(event.sponsors);
         break;
       default:
-        value = event[key] || "TBC";
+        value = event[key] || 'TBC';
     }
     currentEventHTML = currentEventHTML.replace(
-      new RegExp("{{" + key + "}}", "g"),
+      new RegExp('{{' + key + '}}', 'g'),
       value
     );
   }
@@ -91,7 +91,7 @@ function composeApplicationText(eventArr) {
   return eventArr.application_data.reduce((acc, event, i) => {
     acc += generateApplicationText(event);
     if (i === eventArr.length - 1) {
-      return (acc += "</span>");
+      return (acc += '</span>');
     }
     return acc;
   }, result);
@@ -100,11 +100,11 @@ function composeApplicationText(eventArr) {
 function generateApplicationText(event) {
   // if the event is in the future, include application text
   // add a link if there is one
-  var text = "";
+  var text = '';
   if (moment(event.date).isAfter(TODAY)) {
-    text = "<span>" + event.application_text + "</span>";
+    text = '<span>' + event.application_text + '</span>';
     if (event.application_link && event.application_link.length > 0) {
-      text = '<a href="' + event.application_link + '">' + text + "</a>";
+      text = '<a href="' + event.application_link + '">' + text + '</a>';
     }
   }
   return text;
@@ -112,7 +112,7 @@ function generateApplicationText(event) {
 
 function generateSponsors(sponsors) {
   if (sponsors.length === 0) {
-    return "";
+    return '';
   }
   return sponsors.reduce((html, sponsor) => {
     html =
@@ -127,5 +127,5 @@ function generateSponsors(sponsors) {
       '">\
     </a>';
     return html;
-  }, "");
+  }, '');
 }
