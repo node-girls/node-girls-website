@@ -1,5 +1,5 @@
 /*
- Only used for London events
+ Used for /london and /events
 */
 fetch(DATA_URL)
   .then(function(res) {
@@ -30,10 +30,11 @@ function sort(data) {
 }
 
 function filterLondon(data) {
-  // filters out non-London events
+  // keep all data for /events
   if (document.URL.indexOf('/events') !== -1) {
     return data;
   }
+  // filters out non-London events for /london
   return data.filter(function(event) {
     return event.city === 'london';
   });
@@ -41,13 +42,14 @@ function filterLondon(data) {
 
 function handleData(events) {
   var futureHTML;
+  var twitterHandle =
+    document.URL.indexOf('/events') !== -1 ? 'nodegirls' : 'nodegirlslondon';
   if (events.futureEvents.length === 0) {
-    futureHTML =
-      '<p class="flow-text no-events-text">\
+    futureHTML = `<p class="flow-text no-events-text">\
       More events to be announced soon.<br/>Check back here or \
-      <a target="_blank" href="https://www.twitter.com/nodegirlslondon">on Twitter</a> \
+      <a target="_blank" href="https://www.twitter.com/${twitterHandle}">on Twitter</a> \
       for updates!\
-      </p>';
+      </p>`;
   } else {
     futureHTML = events.futureEvents.reduce(generateHTML, '');
   }
