@@ -31,7 +31,7 @@ function sort(data) {
 
 function filterLondon(data) {
   // filters out non-London events
-  if (document.URL.indexOf('/events') !== 0) {
+  if (document.URL.indexOf('/events') !== -1) {
     return data;
   }
   return data.filter(function(event) {
