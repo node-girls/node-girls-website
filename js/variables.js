@@ -4,7 +4,7 @@ var destination = document.querySelector('.events');
 // PRODUCTION URL
 // this requires the latest commit hash in the events-data repo (the merge commit from the last PR)
 // Can be the short or long version.
-var commitHash = '1d01e82a1';
+var commitHash = '9b5990b03';
 var prodUrl =
   'https://cdn.rawgit.com/node-girls/events-data/' +
   commitHash +
