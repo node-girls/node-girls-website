@@ -24,7 +24,7 @@ function sort(data) {
   });
 
   return {
-    futureEvents: futureEvents,
+    futureEvents: futureEvents.reverse(),
     pastEvents: pastEvents
   };
 }
