@@ -18,7 +18,7 @@ function sort(data) {
     return event.date >= TODAY;
   });
   return {
-    futureEvents: futureEvents
+    futureEvents: futureEvents.reverse()
   };
 }
 
