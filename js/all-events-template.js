@@ -5,7 +5,7 @@ fetch(DATA_URL)
   .then(function(res) {
     return res.json();
   })
-  .then(filterLondon)
+  .then(filterLocation)
   .then(sort)
   .then(handleData)
   .then(function(html) {
@@ -29,21 +29,33 @@ function sort(data) {
   };
 }
 
-function filterLondon(data) {
+function filterLocation(data) {
   // keep all data for /events
   if (document.URL.indexOf('/events') !== -1) {
     return data;
+  } else if (document.URL.indexOf('/london') !== -1) {
+    // filters out non-London events for /london
+    return data.filter(function(event) {
+      return event.city === 'london';
+    });
+  } else if (document.URL.indexOf('/madrid') !== -1) {
+    // filters out non-Madrid events for /madrid
+    return data.filter(function(event) {
+      return event.city === 'madrid';
+    });
   }
-  // filters out non-London events for /london
-  return data.filter(function(event) {
-    return event.city === 'london';
-  });
 }
 
 function handleData(events) {
   var futureHTML;
-  var twitterHandle =
-    document.URL.indexOf('/events') !== -1 ? 'nodegirls' : 'nodegirlslondon';
+  var twitterHandle = 'nodegirls';
+  if (document.URL.indexOf('/events') === -1) {
+    if (document.URL.indexOf('/london') !== -1) {
+      twitterHandle += 'london';
+    } else if (document.URL.indexOf('/madrid') !== -1) {
+      twitterHandle += 'madrid';
+    }
+  }
   if (events.futureEvents.length === 0) {
     futureHTML = `<p class="flow-text no-events-text">\
       More events to be announced soon.<br/>Check back here or \
