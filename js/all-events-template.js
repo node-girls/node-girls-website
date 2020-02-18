@@ -60,7 +60,7 @@ function handleData(events) {
     } else if (document.URL.indexOf('/madrid') !== -1) {
       twitterHandle += 'madrid';
     } else if (document.URL.indexOf('/tel-aviv') !== -1) {
-      twitterHandle += 'tel-aviv';
+      twitterHandle += 'tlv';
     }
   }
   if (events.futureEvents.length === 0) {
