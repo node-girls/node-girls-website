@@ -43,6 +43,11 @@ function filterLocation(data) {
     return data.filter(function(event) {
       return event.city === 'madrid';
     });
+  } else if (document.URL.indexOf('/tel-aviv') !== -1) {
+    // filters out non-Madrid events for /tel-aviv
+    return data.filter(function(event) {
+      return event.city === 'tel-aviv';
+    });
   }
 }
 
@@ -54,6 +59,8 @@ function handleData(events) {
       twitterHandle += 'london';
     } else if (document.URL.indexOf('/madrid') !== -1) {
       twitterHandle += 'madrid';
+    } else if (document.URL.indexOf('/tel-aviv') !== -1) {
+      twitterHandle += 'tlv';
     }
   }
   if (events.futureEvents.length === 0) {
