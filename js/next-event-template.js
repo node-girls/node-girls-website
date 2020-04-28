@@ -14,7 +14,8 @@ fetch(DATA_URL)
   .catch(console.err);
 
 function sort(data) {
-  var futureEvents = data.filter(function(event) {
+  var futureEvents = data.filter(function (event) {
+    if (event.date === 'TBC') return false;
     return event.date >= TODAY;
   });
   return {
